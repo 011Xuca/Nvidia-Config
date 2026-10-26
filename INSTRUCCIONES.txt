@@ -1,0 +1,104 @@
+NVIDIA CONFIG
+=====================
+
+Que trae
+--------
+- imagenes\   Capturas del Panel de control de NVIDIA y de la NVIDIA App.
+
+Se usan los dos programas:
+- Panel de control de NVIDIA (el clasico, el de la ventana blanca): pasos 1 y 2.
+  Si no lo tenes, bajalo gratis de la Microsoft Store:
+  https://apps.microsoft.com/detail/9nf8h0h7wmlt
+- NVIDIA App (la nueva, la negra): pasos 3 a 8.
+
+
+1) CONFIGURACION 3D (config1.png, config2.png y config3.png)
+------------------------------------------------------------
+Panel de control de NVIDIA > Configuracion 3D > Controlar la configuracion 3D >
+Configuracion global. Cambialo aca, no en la NVIDIA App:
+- Escala de la imagen: Desactivada
+- Bufer triple: Desactivado
+- Filtrado de texturas - Calidad: Calidad
+- Filtrado de texturas - Optimizacion anisotropica: Desactivado
+- Filtrado de texturas - Optimizacion trilineal: Activado
+- Filtro anisotropico: Controlado por la aplicacion
+- Frecuencia maxima de fotogramas (y la de la aplicacion de fondo): Desactivado
+- Modo baja latencia: Desactivado (los juegos usan NVIDIA Reflex, que es mejor)
+- Modo de control de energia: Preferir rendimiento maximo
+- Oclusion ambiental: Desactivado
+- Sincronizacion vertical: Desactivado
+- Suavizado de lineas - Modo: Controlado por la aplicacion
+- Suavizado de lineas - Transparencia, Muestreo en multiples fotogramas y FXAA: Desactivado
+- Tamano de la cache del sombreador: Ilimitado
+- Lo demas, dejalo como esta en las capturas.
+
+
+2) PANTALLA (pantalla1.png)
+---------------------------
+Panel de control de NVIDIA > despliega la seccion "Pantalla" >
+Ajustar el tamano y la posicion del escritorio:
+- Elegi la pantalla con la que jugas.
+- Modo de ajuste de escala: Pantalla completa
+- Realizar ajuste de escala en: GPU
+
+
+3) G-SYNC (sistema1.png)
+------------------------
+NVIDIA App > Sistema > G-SYNC y Surround:
+- Desactiva G-SYNC solo si en tus juegos tenes MUCHOS mas FPS que los Hz de tu
+  monitor (ejemplo: 400 FPS en un monitor de 144 Hz). Si no, dejalo como esta.
+
+
+4) BAR REDIMENSIONABLE (sistema2.png)
+-------------------------------------
+Hace que el procesador pueda usar toda la memoria de la placa de video de una
+sola vez, en lugar de a pedacitos. En muchos juegos da unos FPS mas.
+Solo anda en placas RTX 30 o mas nuevas.
+1. Primero activalo en la BIOS: "Above 4G Decoding" y "Re-Size BAR Support" en
+   Enabled (el nombre cambia un poco segun la marca de tu placa madre).
+2. Despues, en la NVIDIA App > Graficos: entra a cada juego o app de la lista y
+   pone "BAR redimensionable" en Activado.
+   Si algun juego te anda peor, volvelo a desactivar solo en ese.
+
+
+5) AFINAMIENTO AUTOMATICO (sistema3.png)
+----------------------------------------
+NVIDIA App > Sistema > Rendimiento:
+- Afinamiento automatico: desactivado (es un overclock automatico que puede dar
+  problemas).
+
+
+6) COLOR (sistema4.png)
+-----------------------
+NVIDIA App > Sistema > Pantallas > Color. Pone tu monitor en su gama completa de colores:
+- Configuracion de color de salida: NVIDIA
+- Formato de color de salida: RGB
+- Profundidad de color del escritorio: El mas alto (32 bits)
+- Rango dinamico de salida: Completa
+- Profundidad de color de salida: si tu monitor ofrece 10 bpc, ponelo, PERO solo si
+  no te baja los Hz del monitor. Si los baja, dejalo en 8 bpc.
+- Mas abajo esta "Digital Vibrance" (intensidad del color): sube la saturacion.
+  Sirve para juegos como Valorant, donde lo recomendado es 75% o mas.
+
+
+7) GRAFICOS - CONFIGURACION GLOBAL (graficos1.png y graficos2.png)
+------------------------------------------------------------------
+NVIDIA App > Graficos > Configuracion global:
+- Cache de sombreadores: Tamano: Ilimitado
+- Anulacion de ajustes preestablecidos para el modelo DLSS: Personalizado/a, y todo
+  lo que te deje en "Valor preestablecido C". Asi DLSS anda mejor con la ultima version.
+  Cada vez que actualices el driver, revisa que siga en C.
+
+
+8) CONFIGURACION DE LA APP (confign1.png)
+-----------------------------------------
+NVIDIA App > Configuracion > Funciones. Deja estos 3 desactivados:
+- Superposicion de NVIDIA
+- Filtros de juegos y modo fotografico
+- Descargar automaticamente los controladores
+
+
+Creditos
+--------
+Hecho por 011Xuca
+Redes: https://linktr.ee/011xuca
