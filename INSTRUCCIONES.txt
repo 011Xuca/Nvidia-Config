@@ -3,34 +3,44 @@ NVIDIA CONFIG
 
 Que trae
 --------
-- imagenes\   Capturas del Panel de control de NVIDIA y de la NVIDIA App.
+- nvidia-xuca.nip    Los ajustes 3D del driver, listos para cargar (paso 1).
+- imagenes\          Capturas del Panel de control de NVIDIA y de la NVIDIA App.
 
-Se usan los dos programas:
-- Panel de control de NVIDIA (el clasico, el de la ventana blanca): pasos 1 y 2.
+Se usan tres programas:
+- NVIDIA Profile Inspector: paso 1.
+- Panel de control de NVIDIA (el clasico, el de la ventana blanca): paso 2.
   Si no lo tenes, bajalo gratis de la Microsoft Store:
   https://apps.microsoft.com/detail/9nf8h0h7wmlt
 - NVIDIA App (la nueva, la negra): pasos 3 a 8.
 
 
-1) CONFIGURACION 3D (config1.png, config2.png y config3.png)
-------------------------------------------------------------
-Panel de control de NVIDIA > Configuracion 3D > Controlar la configuracion 3D >
-Configuracion global. Cambialo aca, no en la NVIDIA App:
-- Escala de la imagen: Desactivada
-- Bufer triple: Desactivado
-- Filtrado de texturas - Calidad: Calidad
-- Filtrado de texturas - Optimizacion anisotropica: Desactivado
-- Filtrado de texturas - Optimizacion trilineal: Activado
-- Filtro anisotropico: Controlado por la aplicacion
-- Frecuencia maxima de fotogramas (y la de la aplicacion de fondo): Desactivado
-- Modo baja latencia: Desactivado (los juegos usan NVIDIA Reflex, que es mejor)
+1) CONFIGURACION 3D (nvidia-xuca.nip)
+-------------------------------------
+NVIDIA Profile Inspector es un programa gratis que carga ajustes del driver de NVIDIA.
+Con nvidia-xuca.nip se pone toda la configuracion 3D de una: rendimiento maximo,
+V-Sync apagado, cache de sombreadores ilimitada y el preajuste C de DLSS del paso 7.
+1. Bajalo de aca:  https://github.com/Orbmu2k/nvidiaProfileInspector/releases
+   En la ultima version marcada como "Latest", en "Assets", baja el .zip.
+2. Descomprimilo y abri nvidiaProfileInspector.exe.
+3. Arriba, toca el boton de importar (o la flechita al lado) y elegi
+   "Import profile(s)". Abri nvidia-xuca.nip.
+   Si te pregunta, elegi "Merge" (suma los ajustes sin borrar los tuyos).
+4. Toca "Apply changes" (arriba a la derecha) y cerralo.
+5. Reinicia los juegos que tengas abiertos.
+OJO: el .nip deja G-SYNC apagado. Si lo queres prendido, activalo de nuevo
+como dice el paso 3.
+
+Si no queres bajar el programa, hacelo a mano en Panel de control de NVIDIA >
+Configuracion 3D > Controlar la configuracion 3D > Configuracion global:
 - Modo de control de energia: Preferir rendimiento maximo
-- Oclusion ambiental: Desactivado
 - Sincronizacion vertical: Desactivado
-- Suavizado de lineas - Modo: Controlado por la aplicacion
-- Suavizado de lineas - Transparencia, Muestreo en multiples fotogramas y FXAA: Desactivado
+- Optimizacion enlazada: Activado
 - Tamano de la cache del sombreador: Ilimitado
-- Lo demas, dejalo como esta en las capturas.
+- Lo demas, dejalo como viene.
+
+Para volver atras: en Profile Inspector, con "_GLOBAL_DRIVER_PROFILE" elegido arriba,
+toca "Restore current profile to NVIDIA defaults" (si no lo encontras, pasa el
+mouse por los botones de arriba y te dice el nombre de cada uno).
 
 
 2) PANTALLA (pantalla1.png)
@@ -77,6 +87,9 @@ NVIDIA App > Sistema > Pantallas > Color. Pone tu monitor en su gama completa de
 - Rango dinamico de salida: Completa
 - Profundidad de color de salida: si tu monitor ofrece 10 bpc, ponelo, PERO solo si
   no te baja los Hz del monitor. Si los baja, dejalo en 8 bpc.
+  Para chequearlo: despues de cambiarlo anda a Configuracion de Windows > Sistema >
+  Pantalla > Pantalla avanzada y fijate que la frecuencia siga igual. Tambien revisa
+  que el Formato de color siga en RGB (si cambio solo a YCbCr, volve a 8 bpc).
 - Mas abajo esta "Digital Vibrance" (intensidad del color): sube la saturacion.
   Sirve para juegos como Valorant, donde lo recomendado es 75% o mas.
 
@@ -97,6 +110,13 @@ NVIDIA App > Configuracion > Funciones. Deja estos 3 desactivados:
 - Filtros de juegos y modo fotografico
 - Descargar automaticamente los controladores
 
+
+PARA TENER EN CUENTA
+--------------------
+Hay mas ajustes que se pueden tocar para sacar un poco mas de rendimiento (por
+ejemplo, el Filtrado de texturas en "Alto rendimiento" u otras opciones escondidas de
+Profile Inspector), pero la ganancia es minima y a veces empeora la imagen o da
+problemas. Por eso no estan en esta config.
 
 Creditos
 --------
